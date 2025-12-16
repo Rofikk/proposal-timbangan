@@ -1,162 +1,619 @@
-<!-- ===== SECTION: DEFINE (Client-friendly) ===== -->
-<section id="define" style="margin-top:18px;border:1px solid rgba(15,23,42,.12);background:rgba(255,255,255,.92);border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(2,6,23,.08);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#0f172a;line-height:1.65;">
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Proposal Sistem Timbangan Besi Tua | DMAIC</title>
 
-  <!-- Header -->
-  <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;">
-    <div>
-      <div style="display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:rgba(15,23,42,.70);border:1px solid rgba(15,23,42,.12);background:rgba(248,250,252,.95);padding:7px 10px;border-radius:999px;">
-        <span style="width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,#4f46e5,#06b6d4);box-shadow:0 0 0 6px rgba(79,70,229,.10);"></span>
-        DMAIC &rarr; DEFINE
+<style>
+  *{box-sizing:border-box}
+  a{text-decoration:none}
+  svg{display:block;max-width:100%;height:auto}
+  .table-wrap{overflow:auto;border-radius:14px}
+  .table-wrap table{min-width:720px}
+
+  /* responsive helpers */
+  @media (max-width: 980px){
+    .g12{grid-template-columns:repeat(6,1fr)!important}
+    .span7{grid-column:span 6!important}
+    .span6{grid-column:span 6!important}
+    .span5{grid-column:span 6!important}
+    .span4{grid-column:span 6!important}
+    .span3{grid-column:span 6!important}
+  }
+  @media (max-width: 640px){
+    .g12{grid-template-columns:repeat(12,1fr)!important}
+    .span7,.span6,.span5,.span4,.span3{grid-column:span 12!important}
+    .table-wrap table{min-width:620px}
+  }
+</style>
+</head>
+
+<body style="margin:0;background:#f6f8ff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#0f172a;line-height:1.65;">
+<div style="max-width:1120px;margin:0 auto;padding:24px 16px 80px;">
+
+  <!-- ===== HEADER ===== -->
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+              padding:12px 14px;border:1px solid rgba(15,23,42,.12);
+              background:rgba(255,255,255,.95);border-radius:18px;box-shadow:0 10px 26px rgba(2,6,23,.08);">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:42px;height:42px;border-radius:16px;
+                  background:linear-gradient(135deg,#4f46e5,#06b6d4);
+                  box-shadow:0 14px 30px rgba(79,70,229,.16);
+                  border:1px solid rgba(15,23,42,.10);"></div>
+      <div>
+        <div style="font-weight:900;font-size:14px;margin:0;">Proposal Sistem Timbangan Besi Tua</div>
+        <div style="font-size:12px;color:rgba(15,23,42,.70);margin:0;">DMAIC • Define • Measure • Analyse • Improve</div>
       </div>
-      <h2 style="margin:10px 0 6px;font-size:20px;line-height:1.2;">Define: Masalah yang Akan Kami Perbaiki</h2>
-      <p style="margin:0;color:rgba(15,23,42,.72);font-size:13.5px;">
-        Bagian <b>Define</b> menjelaskan <b>kondisi saat ini (AS-IS)</b> dan <b>kenapa perlu diperbaiki</b>.
-        Tujuannya supaya Bapak/Ibu punya gambaran yang sama: <b>di mana sumber lambatnya proses</b> dan <b>di mana celah risiko</b>.
-      </p>
     </div>
 
     <div style="display:flex;gap:8px;flex-wrap:wrap;">
-      <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(225,29,72,.25);background:rgba(225,29,72,.08);color:rgba(225,29,72,.95);">Risiko salah tulis</span>
-      <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(245,158,11,.25);background:rgba(245,158,11,.10);color:rgba(245,158,11,.95);">Proses lambat</span>
-      <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(79,70,229,.25);background:rgba(79,70,229,.08);color:rgba(79,70,229,.95);">Sulit audit</span>
+      <a href="#define" style="padding:8px 12px;border-radius:999px;border:1px solid rgba(15,23,42,.12);
+                              background:rgba(255,255,255,.92);color:rgba(15,23,42,.75);font-weight:900;font-size:13px;">Define</a>
+      <a href="#measure" style="padding:8px 12px;border-radius:999px;border:1px solid rgba(15,23,42,.12);
+                               background:rgba(255,255,255,.92);color:rgba(15,23,42,.75);font-weight:900;font-size:13px;">Measure</a>
+      <a href="#analyse" style="padding:8px 12px;border-radius:999px;border:1px solid rgba(15,23,42,.12);
+                               background:rgba(255,255,255,.92);color:rgba(15,23,42,.75);font-weight:900;font-size:13px;">Analyse</a>
+      <a href="#improve" style="padding:8px 12px;border-radius:999px;border:1px solid rgba(15,23,42,.12);
+                               background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;font-weight:900;font-size:13px;">Improve</a>
     </div>
   </div>
 
-  <div style="height:1px;background:rgba(15,23,42,.10);margin:14px 0;"></div>
+  <!-- ===== DEFINE ===== -->
+  <section id="define" style="margin-top:18px;border:1px solid rgba(15,23,42,.12);background:rgba(255,255,255,.92);
+    border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(2,6,23,.08);">
 
-  <!-- AS-IS + Pain points -->
-  <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:12px;">
-
-    <!-- AS-IS Flow -->
-    <div style="grid-column:span 7;border:1px solid rgba(15,23,42,.12);background:rgba(248,250,252,.95);border-radius:16px;padding:14px;">
-      <h3 style="margin:0 0 10px;font-size:14px;">Alur Proses Saat Ini (Manual)</h3>
-
-      <!-- Steps -->
-      <ol style="margin:0;padding-left:18px;color:rgba(15,23,42,.80);font-size:13.3px;">
-        <li style="margin:0 0 8px;">
-          <b>Pencatatan di kertas setelah timbang</b><br/>
-          <span style="color:rgba(15,23,42,.68);">
-            Hasil timbangan ditulis manual. Di titik ini, angka sangat bergantung pada ketelitian manusia.
-          </span>
-        </li>
-
-        <li style="margin:0 0 8px;">
-          <b>Kertas diserahkan ke admin untuk “dirupiahkan”</b><br/>
-          <span style="color:rgba(15,23,42,.68);">
-            Terjadi serah-terima fisik. Kalau kertas terlambat, hilang, atau rusak, proses ikut terganggu.
-          </span>
-        </li>
-
-        <li style="margin:0 0 8px;">
-          <b>Admin memeriksa barang untuk verifikasi</b><br/>
-          <span style="color:rgba(15,23,42,.68);">
-            Verifikasi dilakukan terpisah dari proses timbang. Risiko mismatch data (barang vs catatan) jadi lebih tinggi.
-          </span>
-        </li>
-
-        <li style="margin:0 0 8px;">
-          <b>Admin menghitung total transaksi harian untuk pembayaran</b><br/>
-          <span style="color:rgba(15,23,42,.68);">
-            Rekap dan penjumlahan manual memakan waktu dan rawan salah hitung, terutama saat transaksi ramai.
-          </span>
-        </li>
-
-        <li style="margin:0 0 8px;">
-          <b>Supervisor merekap transaksi periode berjalan</b><br/>
-          <span style="color:rgba(15,23,42,.68);">
-            Karena data tersebar (kertas/rekap manual), supervisor butuh waktu ekstra untuk memastikan data “beres”.
-          </span>
-        </li>
-
-        <li style="margin:0;">
-          <b>Supervisor merekap distribusi ke gudang pusat</b><br/>
-          <span style="color:rgba(15,23,42,.68);">
-            Traceability (jejak dari timbang sampai gudang) lemah, sehingga selisih lebih sulit ditelusuri sumbernya.
-          </span>
-        </li>
-      </ol>
-    </div>
-
-    <!-- What goes wrong -->
-    <div style="grid-column:span 5;display:flex;flex-direction:column;gap:12px;">
-      <div style="border:1px solid rgba(225,29,72,.18);background:rgba(225,29,72,.06);border-radius:16px;padding:14px;">
-        <h3 style="margin:0 0 6px;font-size:14px;color:rgba(225,29,72,.92);">Apa Risiko Utamanya?</h3>
-        <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
-          <li><b>Salah tulis angka timbang</b> → berdampak langsung ke nilai pembayaran.</li>
-          <li><b>Kertas hilang/robek</b> → transaksi tertahan / butuh input ulang.</li>
-          <li><b>Data tidak punya jejak digital</b> → sulit audit ketika ada komplain/selisih.</li>
-        </ul>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:rgba(15,23,42,.70);
+                    border:1px solid rgba(15,23,42,.12);background:rgba(248,250,252,.95);padding:7px 10px;border-radius:999px;">
+          <span style="width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,#4f46e5,#06b6d4);
+                       box-shadow:0 0 0 6px rgba(79,70,229,.10);"></span>
+          DMAIC • DEFINE
+        </div>
+        <h2 style="margin:10px 0 6px;font-size:20px;line-height:1.2;">Define: Masalah yang Akan Kami Perbaiki</h2>
+        <p style="margin:0;color:rgba(15,23,42,.72);font-size:13.5px;">
+          Bagian <b>Define</b> menjelaskan <b>kondisi saat ini (AS-IS)</b> dan <b>kenapa perlu diperbaiki</b>.
+          Tujuannya supaya Bapak/Ibu punya gambaran yang sama: <b>di mana sumber lambatnya proses</b> dan <b>di mana celah risiko</b>.
+        </p>
       </div>
 
-      <div style="border:1px solid rgba(245,158,11,.18);background:rgba(245,158,11,.07);border-radius:16px;padding:14px;">
-        <h3 style="margin:0 0 6px;font-size:14px;color:rgba(245,158,11,.95);">Kenapa Proses Terasa Lambat?</h3>
-        <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
-          <li>Serah-terima kertas membuat antrean (bottleneck).</li>
-          <li>Verifikasi dilakukan terpisah, jadi “bolak-balik”.</li>
-          <li>Rekap harian manual makan waktu saat jam tutup.</li>
-        </ul>
-      </div>
-
-      <div style="border:1px solid rgba(79,70,229,.18);background:rgba(79,70,229,.06);border-radius:16px;padding:14px;">
-        <h3 style="margin:0 0 6px;font-size:14px;color:rgba(79,70,229,.95);">Apa Dampak ke Manajemen?</h3>
-        <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
-          <li>Sulit melihat angka real-time (harus tunggu rekap).</li>
-          <li>Sulit menelusuri selisih timbang vs gudang pusat.</li>
-          <li>Transparansi dan akuntabilitas terbatas.</li>
-        </ul>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(225,29,72,.25);
+                     background:rgba(225,29,72,.08);color:rgba(225,29,72,.95);">Risiko salah tulis</span>
+        <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(245,158,11,.25);
+                     background:rgba(245,158,11,.10);color:rgba(245,158,11,.95);">Proses lambat</span>
+        <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(79,70,229,.25);
+                     background:rgba(79,70,229,.08);color:rgba(79,70,229,.95);">Sulit audit</span>
       </div>
     </div>
 
-    <!-- Visual summary -->
-    <div style="grid-column:span 12;border:1px solid rgba(15,23,42,.12);background:rgba(255,255,255,.92);border-radius:16px;padding:14px;">
-      <h3 style="margin:0 0 10px;font-size:14px;">Visual Singkat: Titik Masalah</h3>
+    <div style="height:1px;background:rgba(15,23,42,.10);margin:14px 0;"></div>
 
-      <svg viewBox="0 0 1200 170" width="100%" height="auto" role="img" aria-label="Visual titik masalah">
+    <div class="g12" style="display:grid;grid-template-columns:repeat(12,1fr);gap:12px;">
+
+      <div class="span7" style="grid-column:span 7;border:1px solid rgba(15,23,42,.12);background:rgba(248,250,252,.95);
+        border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 10px;font-size:14px;">Alur Proses Saat Ini (Manual)</h3>
+
+        <ol style="margin:0;padding-left:18px;color:rgba(15,23,42,.80);font-size:13.3px;">
+          <li style="margin:0 0 8px;"><b>Pencatatan di kertas setelah timbang</b><br/><span style="color:rgba(15,23,42,.68);">Hasil timbangan ditulis manual.</span></li>
+          <li style="margin:0 0 8px;"><b>Kertas diserahkan ke admin untuk “dirupiahkan”</b><br/><span style="color:rgba(15,23,42,.68);">Serah-terima fisik memicu bottleneck.</span></li>
+          <li style="margin:0 0 8px;"><b>Admin memeriksa barang untuk verifikasi</b><br/><span style="color:rgba(15,23,42,.68);">Verifikasi terpisah dari timbang → rawan mismatch.</span></li>
+          <li style="margin:0 0 8px;"><b>Admin menghitung total transaksi harian</b><br/><span style="color:rgba(15,23,42,.68);">Penjumlahan manual rawan salah & makan waktu.</span></li>
+          <li style="margin:0 0 8px;"><b>Supervisor merekap transaksi periode berjalan</b><br/><span style="color:rgba(15,23,42,.68);">Data tersebar → kontrol terlambat.</span></li>
+          <li style="margin:0;"><b>Supervisor merekap distribusi ke gudang pusat</b><br/><span style="color:rgba(15,23,42,.68);">Traceability lemah end-to-end.</span></li>
+        </ol>
+      </div>
+
+      <div class="span5" style="grid-column:span 5;display:flex;flex-direction:column;gap:12px;">
+        <div style="border:1px solid rgba(225,29,72,.18);background:rgba(225,29,72,.06);border-radius:16px;padding:14px;">
+          <h3 style="margin:0 0 6px;font-size:14px;color:rgba(225,29,72,.92);">Apa Risiko Utamanya?</h3>
+          <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+            <li><b>Salah tulis angka timbang</b> → salah bayar/komplain.</li>
+            <li><b>Kertas hilang/robek</b> → transaksi tertahan.</li>
+            <li><b>Tanpa jejak digital</b> → sulit audit & bukti.</li>
+          </ul>
+        </div>
+
+        <div style="border:1px solid rgba(245,158,11,.18);background:rgba(245,158,11,.07);border-radius:16px;padding:14px;">
+          <h3 style="margin:0 0 6px;font-size:14px;color:rgba(245,158,11,.95);">Kenapa Proses Terasa Lambat?</h3>
+          <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+            <li>Serah-terima kertas membuat antrean.</li>
+            <li>Verifikasi terpisah → “bolak-balik”.</li>
+            <li>Rekap harian manual saat jam tutup.</li>
+          </ul>
+        </div>
+
+        <div style="border:1px solid rgba(79,70,229,.18);background:rgba(79,70,229,.06);border-radius:16px;padding:14px;">
+          <h3 style="margin:0 0 6px;font-size:14px;color:rgba(79,70,229,.95);">Apa Dampak ke Manajemen?</h3>
+          <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+            <li>Angka tidak real-time.</li>
+            <li>Sulit telusur selisih timbang vs gudang.</li>
+            <li>Transparansi dan akuntabilitas terbatas.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="grid-column:span 12;border:1px solid rgba(15,23,42,.12);background:rgba(255,255,255,.92);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 10px;font-size:14px;">Visual Singkat: Titik Masalah</h3>
+
+        <svg viewBox="0 0 1200 170" width="100%" role="img" aria-label="Visual titik masalah">
+          <defs>
+            <linearGradient id="gDefine" x1="0" x2="1">
+              <stop offset="0" stop-color="#4f46e5" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#06b6d4" stop-opacity=".90"/>
+            </linearGradient>
+          </defs>
+
+          <rect x="12" y="12" width="1176" height="146" rx="18" fill="rgba(248,250,252,.95)" stroke="rgba(15,23,42,.12)"/>
+
+          <g font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial">
+            <rect x="30" y="52" width="180" height="70" rx="16" fill="rgba(225,29,72,.08)" stroke="rgba(225,29,72,.22)"/>
+            <text x="48" y="84" font-size="13" font-weight="900" fill="rgba(225,29,72,.95)">Catat Kertas</text>
+            <text x="48" y="106" font-size="12" fill="rgba(15,23,42,.70)">rawan salah & hilang</text>
+
+            <rect x="240" y="52" width="190" height="70" rx="16" fill="rgba(245,158,11,.10)" stroke="rgba(245,158,11,.22)"/>
+            <text x="258" y="84" font-size="13" font-weight="900" fill="rgba(245,158,11,.95)">Handoff Kertas</text>
+            <text x="258" y="106" font-size="12" fill="rgba(15,23,42,.70)">bottleneck antrean</text>
+
+            <rect x="460" y="52" width="190" height="70" rx="16" fill="rgba(79,70,229,.08)" stroke="rgba(79,70,229,.20)"/>
+            <text x="478" y="84" font-size="13" font-weight="900" fill="rgba(79,70,229,.95)">Verifikasi</text>
+            <text x="478" y="106" font-size="12" fill="rgba(15,23,42,.70)">tanpa jejak digital</text>
+
+            <rect x="680" y="52" width="210" height="70" rx="16" fill="rgba(245,158,11,.10)" stroke="rgba(245,158,11,.22)"/>
+            <text x="698" y="84" font-size="13" font-weight="900" fill="rgba(245,158,11,.95)">Rekap Harian</text>
+            <text x="698" y="106" font-size="12" fill="rgba(15,23,42,.70)">hitung manual</text>
+
+            <rect x="920" y="52" width="240" height="70" rx="16" fill="rgba(79,70,229,.08)" stroke="rgba(79,70,229,.20)"/>
+            <text x="938" y="84" font-size="13" font-weight="900" fill="rgba(79,70,229,.95)">Gudang Pusat</text>
+            <text x="938" y="106" font-size="12" fill="rgba(15,23,42,.70)">traceability lemah</text>
+          </g>
+
+          <g stroke="url(#gDefine)" stroke-width="4" fill="none" stroke-linecap="round">
+            <path d="M210 87 C 222 87, 228 87, 240 87"/>
+            <path d="M430 87 C 442 87, 448 87, 460 87"/>
+            <path d="M650 87 C 662 87, 668 87, 680 87"/>
+            <path d="M890 87 C 902 87, 908 87, 920 87"/>
+          </g>
+        </svg>
+
+        <div style="margin-top:10px;border:1px solid rgba(15,23,42,.10);background:rgba(248,250,252,.95);
+                    border-radius:14px;padding:10px;color:rgba(15,23,42,.72);font-size:12.6px;">
+          <b>Kesimpulan Define:</b> masalah utama bukan hanya “pencatatan”, tetapi <b>rantai proses yang bergantung pada kertas</b>.
+          Ini membuat proses lambat, rawan salah, dan sulit ditelusuri saat ada selisih atau audit.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== MEASURE ===== -->
+  <section id="measure" style="margin-top:18px;border:1px solid rgba(15,23,42,.12);background:rgba(255,255,255,.92);
+    border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(2,6,23,.08);">
+
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:rgba(15,23,42,.70);
+                    border:1px solid rgba(15,23,42,.12);background:rgba(248,250,252,.95);
+                    padding:7px 10px;border-radius:999px;">
+          <span style="width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,#4f46e5,#06b6d4);
+                       box-shadow:0 0 0 6px rgba(79,70,229,.10);"></span>
+          DMAIC • MEASURE
+        </div>
+        <h2 style="margin:10px 0 6px;font-size:20px;line-height:1.2;">Measure: Di Mana Masalah Ini Terlihat & Terukur</h2>
+        <p style="margin:0;color:rgba(15,23,42,.72);font-size:13.5px;">
+          Pada tahap <b>Measure</b>, kami mengukur <b>dampak nyata</b> dari proses manual: waktu terbuang, risiko error, dan lemahnya kontrol.
+        </p>
+      </div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(245,158,11,.25);
+                     background:rgba(245,158,11,.10);color:rgba(245,158,11,.95);">Waktu terbuang</span>
+        <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(225,29,72,.25);
+                     background:rgba(225,29,72,.08);color:rgba(225,29,72,.95);">Risiko error</span>
+        <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(79,70,229,.25);
+                     background:rgba(79,70,229,.08);color:rgba(79,70,229,.95);">Tidak real-time</span>
+      </div>
+    </div>
+
+    <div style="height:1px;background:rgba(15,23,42,.10);margin:14px 0;"></div>
+
+    <div class="g12" style="display:grid;grid-template-columns:repeat(12,1fr);gap:12px;">
+      <div class="span4" style="grid-column:span 4;border:1px solid rgba(245,158,11,.20);background:rgba(245,158,11,.07);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 6px;font-size:14px;color:rgba(245,158,11,.95);">⏱ Waktu Proses</h3>
+        <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+          <li>Timbang + tulis manual lebih lama</li>
+          <li>Antrean saat serah kertas ke admin</li>
+          <li>Rekap harian menumpuk di akhir hari</li>
+        </ul>
+      </div>
+
+      <div class="span4" style="grid-column:span 4;border:1px solid rgba(225,29,72,.20);background:rgba(225,29,72,.06);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 6px;font-size:14px;color:rgba(225,29,72,.92);">❌ Akurasi Data</h3>
+        <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+          <li>Salah tulis / salah baca</li>
+          <li>Versi data “berbeda” antara kertas dan rekap</li>
+          <li>Rawan salah hitung total</li>
+        </ul>
+      </div>
+
+      <div class="span4" style="grid-column:span 4;border:1px solid rgba(79,70,229,.20);background:rgba(79,70,229,.06);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 6px;font-size:14px;color:rgba(79,70,229,.95);">🔍 Kontrol & Audit</h3>
+        <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+          <li>Tidak ada audit trail</li>
+          <li>Sulit telusur sumber selisih</li>
+          <li>Kontrol manajemen tidak real-time</li>
+        </ul>
+      </div>
+
+      <div style="grid-column:span 12;border:1px solid rgba(15,23,42,.12);background:rgba(248,250,252,.95);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 10px;font-size:14px;">Ringkasan Pengukuran (AS-IS)</h3>
+
+        <div class="table-wrap">
+          <table style="width:100%;border-collapse:collapse;font-size:13px;">
+            <thead>
+              <tr style="background:rgba(79,70,229,.08);">
+                <th style="padding:8px;border:1px solid rgba(15,23,42,.12);text-align:left;">Aspek</th>
+                <th style="padding:8px;border:1px solid rgba(15,23,42,.12);text-align:left;">Kondisi Saat Ini</th>
+                <th style="padding:8px;border:1px solid rgba(15,23,42,.12);text-align:left;">Risiko</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:8px;border:1px solid rgba(15,23,42,.12);">Waktu Proses</td>
+                <td style="padding:8px;border:1px solid rgba(15,23,42,.12);">Manual & berlapis</td>
+                <td style="padding:8px;border:1px solid rgba(15,23,42,.12);">Antrean & keterlambatan</td>
+              </tr>
+              <tr>
+                <td style="padding:8px;border:1px solid rgba(15,23,42,.12);">Akurasi</td>
+                <td style="padding:8px;border:1px solid rgba(15,23,42,.12);">Bergantung manusia</td>
+                <td style="padding:8px;border:1px solid rgba(15,23,42,.12);">Salah bayar</td>
+              </tr>
+              <tr>
+                <td style="padding:8px;border:1px solid rgba(15,23,42,.12);">Audit & Kontrol</td>
+                <td style="padding:8px;border:1px solid rgba(15,23,42,.12);">Berbasis kertas</td>
+                <td style="padding:8px;border:1px solid rgba(15,23,42,.12);">Sulit telusur</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:10px;border:1px solid rgba(15,23,42,.10);background:rgba(255,255,255,.92);border-radius:14px;padding:10px;color:rgba(15,23,42,.72);font-size:12.6px;">
+          <b>Kesimpulan Measure:</b> proses manual menyebabkan <b>waktu lebih lama</b>, <b>risiko kesalahan tinggi</b>, dan <b>kontrol lemah</b>.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ANALYSE ===== -->
+  <section id="analyse" style="margin-top:18px;border:1px solid rgba(15,23,42,.12);background:rgba(255,255,255,.92);
+    border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(2,6,23,.08);">
+
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:rgba(15,23,42,.70);
+                    border:1px solid rgba(15,23,42,.12);background:rgba(248,250,252,.95);
+                    padding:7px 10px;border-radius:999px;">
+          <span style="width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,#4f46e5,#06b6d4);
+                       box-shadow:0 0 0 6px rgba(79,70,229,.10);"></span>
+          DMAIC • ANALYSE
+        </div>
+        <h2 style="margin:10px 0 6px;font-size:20px;line-height:1.2;">Analyse: Akar Masalah (Kenapa Ini Berulang)</h2>
+        <p style="margin:0;color:rgba(15,23,42,.72);font-size:13.5px;">
+          Tahap <b>Analyse</b> memetakan <b>akar penyebab</b>. Fokus: menghilangkan penyebab, bukan menambal gejala.
+        </p>
+      </div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(79,70,229,.25);
+                     background:rgba(79,70,229,.08);color:rgba(79,70,229,.95);">Root Cause</span>
+        <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(245,158,11,.25);
+                     background:rgba(245,158,11,.10);color:rgba(245,158,11,.95);">Bottleneck</span>
+        <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(225,29,72,.25);
+                     background:rgba(225,29,72,.08);color:rgba(225,29,72,.95);">Human Error</span>
+      </div>
+    </div>
+
+    <div style="height:1px;background:rgba(15,23,42,.10);margin:14px 0;"></div>
+
+    <div class="g12" style="display:grid;grid-template-columns:repeat(12,1fr);gap:12px;">
+
+      <div class="span6" style="grid-column:span 6;border:1px solid rgba(15,23,42,.12);background:rgba(248,250,252,.95);
+        border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 10px;font-size:14px;">5 Why (ringkas) – “Kenapa selisih/komplain muncul?”</h3>
+        <ol style="margin:0;padding-left:18px;color:rgba(15,23,42,.80);font-size:13.2px;">
+          <li style="margin:0 0 8px;"><b>Karena</b> timbang & harga ditulis manual → rawan salah.</li>
+          <li style="margin:0 0 8px;"><b>Karena</b> data pindah lewat kertas → bisa hilang/beda versi.</li>
+          <li style="margin:0 0 8px;"><b>Karena</b> verifikasi tidak terdokumentasi → sulit pembuktian.</li>
+          <li style="margin:0 0 8px;"><b>Karena</b> tidak ada status lock → koreksi tidak terkontrol.</li>
+          <li style="margin:0;"><b>Karena</b> RS232 timbangan belum dimanfaatkan + belum ada audit trail.</li>
+        </ol>
+        <div style="margin-top:10px;border:1px solid rgba(15,23,42,.10);background:rgba(255,255,255,.92);
+                    border-radius:14px;padding:10px;color:rgba(15,23,42,.72);font-size:12.6px;">
+          <b>Inti root cause:</b> ketergantungan kertas + tidak ada kontrol versi data.
+        </div>
+      </div>
+
+      <div class="span6" style="grid-column:span 6;display:flex;flex-direction:column;gap:12px;">
+        <div style="border:1px solid rgba(245,158,11,.18);background:rgba(245,158,11,.07);border-radius:16px;padding:14px;">
+          <h3 style="margin:0 0 6px;font-size:14px;color:rgba(245,158,11,.95);">1) Bottleneck Proses</h3>
+          <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+            <li>Handoff kertas = titik antrean.</li>
+            <li>Rekap manual menumpuk di akhir hari.</li>
+            <li>Supervisor baru kontrol setelah rekap (telat).</li>
+          </ul>
+        </div>
+
+        <div style="border:1px solid rgba(225,29,72,.18);background:rgba(225,29,72,.06);border-radius:16px;padding:14px;">
+          <h3 style="margin:0 0 6px;font-size:14px;color:rgba(225,29,72,.92);">2) Human Error by Design</h3>
+          <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+            <li>Input manual berulang memicu error.</li>
+            <li>Tulisan tangan tidak standar.</li>
+            <li>Hitung total manual rawan salah.</li>
+          </ul>
+        </div>
+
+        <div style="border:1px solid rgba(79,70,229,.18);background:rgba(79,70,229,.06);border-radius:16px;padding:14px;">
+          <h3 style="margin:0 0 6px;font-size:14px;color:rgba(79,70,229,.95);">3) Kontrol & Audit Lemah</h3>
+          <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+            <li>Tidak ada log perubahan (siapa/kapan/kenapa).</li>
+            <li>Verifikasi tanpa bukti keputusan.</li>
+            <li>Traceability ke gudang tidak end-to-end.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Fishbone (FIXED: tighter, centered, bigger text) -->
+      <div style="grid-column:span 12;border:1px solid rgba(15,23,42,.12);background:rgba(255,255,255,.92);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 10px;font-size:14px;">Visual Root Cause (Fishbone)</h3>
+
+        <svg viewBox="0 0 1100 260" width="100%" role="img" aria-label="Fishbone root cause">
+          <defs>
+            <linearGradient id="gA" x1="0" x2="1">
+              <stop offset="0" stop-color="#4f46e5" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#06b6d4" stop-opacity=".90"/>
+            </linearGradient>
+          </defs>
+
+          <rect x="12" y="12" width="1076" height="236" rx="18" fill="rgba(248,250,252,.95)" stroke="rgba(15,23,42,.12)"/>
+
+          <!-- spine -->
+          <line x1="130" y1="140" x2="860" y2="140" stroke="url(#gA)" stroke-width="5" stroke-linecap="round"/>
+
+          <!-- head -->
+          <polygon points="860,115 1060,140 860,165" fill="rgba(225,29,72,.10)" stroke="rgba(225,29,72,.25)" stroke-width="2"/>
+          <text x="885" y="145" font-size="14" font-weight="900" fill="rgba(225,29,72,.92)">Masalah</text>
+          <text x="885" y="165" font-size="12" fill="rgba(15,23,42,.70)">Lambat • Selisih • Sulit Audit</text>
+
+          <!-- top bones -->
+          <g stroke="rgba(15,23,42,.28)" stroke-width="3">
+            <line x1="250" y1="140" x2="190" y2="75"/>
+            <line x1="420" y1="140" x2="360" y2="75"/>
+            <line x1="590" y1="140" x2="530" y2="75"/>
+            <line x1="760" y1="140" x2="700" y2="75"/>
+          </g>
+
+          <!-- labels top -->
+          <g font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial" fill="rgba(15,23,42,.82)">
+            <text x="65" y="62" font-size="13" font-weight="900">Method</text>
+            <text x="65" y="84" font-size="12" fill="rgba(15,23,42,.70)">handoff kertas</text>
+            <text x="65" y="104" font-size="12" fill="rgba(15,23,42,.70)">rekap manual</text>
+
+            <text x="280" y="62" font-size="13" font-weight="900" fill="rgba(15,23,42,.82)">Man</text>
+            <text x="280" y="84" font-size="12" fill="rgba(15,23,42,.70)">salah tulis/baca</text>
+            <text x="280" y="104" font-size="12" fill="rgba(15,23,42,.70)">input berulang</text>
+
+            <text x="470" y="62" font-size="13" font-weight="900" fill="rgba(15,23,42,.82)">Machine</text>
+            <text x="470" y="84" font-size="12" fill="rgba(15,23,42,.70)">RS232 belum dimanfaatkan</text>
+
+            <text x="650" y="62" font-size="13" font-weight="900" fill="rgba(15,23,42,.82)">Measurement</text>
+            <text x="650" y="84" font-size="12" fill="rgba(15,23,42,.70)">tanpa audit log</text>
+            <text x="650" y="104" font-size="12" fill="rgba(15,23,42,.70)">tidak real-time</text>
+          </g>
+
+          <!-- bottom bones -->
+          <g stroke="rgba(15,23,42,.28)" stroke-width="3">
+            <line x1="310" y1="140" x2="250" y2="205"/>
+            <line x1="510" y1="140" x2="450" y2="205"/>
+            <line x1="710" y1="140" x2="650" y2="205"/>
+          </g>
+
+          <!-- labels bottom -->
+          <g font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial">
+            <text x="65" y="202" font-size="13" font-weight="900" fill="rgba(15,23,42,.82)">Material</text>
+            <text x="65" y="224" font-size="12" fill="rgba(15,23,42,.70)">jenis barang mirip</text>
+            <text x="65" y="244" font-size="12" fill="rgba(15,23,42,.70)">butuh kode standar</text>
+
+            <text x="280" y="202" font-size="13" font-weight="900" fill="rgba(15,23,42,.82)">Environment</text>
+            <text x="280" y="224" font-size="12" fill="rgba(15,23,42,.70)">ramai jam tertentu</text>
+            <text x="280" y="244" font-size="12" fill="rgba(15,23,42,.70)">paper easily lost</text>
+
+            <text x="470" y="202" font-size="13" font-weight="900" fill="rgba(15,23,42,.82)">System</text>
+            <text x="470" y="224" font-size="12" fill="rgba(15,23,42,.70)">no status lock</text>
+            <text x="470" y="244" font-size="12" fill="rgba(15,23,42,.70)">no workflow</text>
+          </g>
+        </svg>
+
+        <div style="margin-top:10px;border:1px solid rgba(15,23,42,.10);background:rgba(255,255,255,.92);
+                    border-radius:14px;padding:10px;color:rgba(15,23,42,.72);font-size:12.6px;">
+          <b>Kesimpulan Analyse:</b> akar masalah terbesar adalah <b>ketergantungan pada proses manual (kertas)</b> +
+          <b>tidak adanya workflow & audit trail</b>.
+        </div>
+      </div>
+
+      <!-- Bridge -->
+      <div style="grid-column:span 12;border:1px solid rgba(6,182,212,.20);background:rgba(6,182,212,.06);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 6px;font-size:14px;color:rgba(6,182,212,.95);">Arah Solusi (jembatan ke Improve)</h3>
+        <div class="g12" style="display:grid;grid-template-columns:repeat(12,1fr);gap:10px;">
+          <div class="span4" style="grid-column:span 4;border:1px solid rgba(15,23,42,.10);background:rgba(255,255,255,.92);border-radius:14px;padding:10px;">
+            <b>Capture dari Timbangan</b><br/><span style="color:rgba(15,23,42,.70);font-size:12.6px;">Manfaatkan RS232 agar angka timbang masuk otomatis (lebih akurat).</span>
+          </div>
+          <div class="span4" style="grid-column:span 4;border:1px solid rgba(15,23,42,.10);background:rgba(255,255,255,.92);border-radius:14px;padding:10px;">
+            <b>Workflow & Status</b><br/><span style="color:rgba(15,23,42,.70);font-size:12.6px;">Draft → Verifikasi (bisa batal) → Settlement.</span>
+          </div>
+          <div class="span4" style="grid-column:span 4;border:1px solid rgba(15,23,42,.10);background:rgba(255,255,255,.92);border-radius:14px;padding:10px;">
+            <b>Audit Trail & Laporan</b><br/><span style="color:rgba(15,23,42,.70);font-size:12.6px;">Siapa mengubah apa, kapan, alasan. Siap audit.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== IMPROVE ===== -->
+  <section id="improve" style="margin-top:18px;border:1px solid rgba(15,23,42,.12);background:rgba(255,255,255,.92);
+    border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(2,6,23,.08);">
+
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:rgba(15,23,42,.70);
+                    border:1px solid rgba(15,23,42,.12);background:rgba(248,250,252,.95);
+                    padding:7px 10px;border-radius:999px;">
+          <span style="width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,#4f46e5,#06b6d4);
+                       box-shadow:0 0 0 6px rgba(79,70,229,.10);"></span>
+          DMAIC • IMPROVE
+        </div>
+        <h2 style="margin:10px 0 6px;font-size:20px;line-height:1.2;">Improve: Desain Solusi (TO-BE) yang Lebih Cepat & Auditable</h2>
+        <p style="margin:0;color:rgba(15,23,42,.72);font-size:13.5px;">
+          Tahap <b>Improve</b> menjawab: <b>apa yang kita ubah</b> agar proses lebih cepat, lebih akurat, dan punya jejak audit.
+          Fokus utama: <b>auto-weighing dari RS232</b>, <b>workflow transaksi</b>, dan <b>audit trail end-to-end</b>.
+        </p>
+      </div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(16,185,129,.25);
+                     background:rgba(16,185,129,.10);color:rgba(16,185,129,.95);">Lebih cepat</span>
+        <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(79,70,229,.25);
+                     background:rgba(79,70,229,.08);color:rgba(79,70,229,.95);">Lebih akurat</span>
+        <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;border:1px solid rgba(245,158,11,.25);
+                     background:rgba(245,158,11,.10);color:rgba(245,158,11,.95);">Siap audit</span>
+      </div>
+    </div>
+
+    <div style="height:1px;background:rgba(15,23,42,.10);margin:14px 0;"></div>
+
+    <!-- TO-BE Flow Visual -->
+    <div style="border:1px solid rgba(15,23,42,.12);background:rgba(248,250,252,.95);border-radius:16px;padding:14px;">
+      <h3 style="margin:0 0 10px;font-size:14px;">Visual TO-BE (Alur Baru)</h3>
+
+      <svg viewBox="0 0 1200 210" width="100%" role="img" aria-label="TO-BE flow">
         <defs>
-          <linearGradient id="gDefine" x1="0" x2="1">
-            <stop offset="0" stop-color="#4f46e5" stop-opacity=".95"/>
+          <linearGradient id="gI" x1="0" x2="1">
+            <stop offset="0" stop-color="#10b981" stop-opacity=".95"/>
             <stop offset="1" stop-color="#06b6d4" stop-opacity=".90"/>
           </linearGradient>
         </defs>
 
-        <rect x="12" y="12" width="1176" height="146" rx="18" fill="rgba(248,250,252,.95)" stroke="rgba(15,23,42,.12)"/>
+        <rect x="12" y="12" width="1176" height="186" rx="18" fill="rgba(255,255,255,.92)" stroke="rgba(15,23,42,.12)"/>
 
-        <!-- Nodes -->
         <g font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial">
-          <rect x="30" y="52" width="180" height="70" rx="16" fill="rgba(225,29,72,.08)" stroke="rgba(225,29,72,.22)"/>
-          <text x="48" y="84" font-size="13" font-weight="900" fill="rgba(225,29,72,.95)">Catat Kertas</text>
-          <text x="48" y="106" font-size="12" fill="rgba(15,23,42,.70)">rawan salah & hilang</text>
+          <rect x="30" y="70" width="200" height="80" rx="16" fill="rgba(16,185,129,.10)" stroke="rgba(16,185,129,.25)"/>
+          <text x="48" y="102" font-size="13" font-weight="900" fill="rgba(16,185,129,.95)">Timbang (RS232)</text>
+          <text x="48" y="124" font-size="12" fill="rgba(15,23,42,.70)">angka masuk otomatis</text>
 
-          <rect x="240" y="52" width="190" height="70" rx="16" fill="rgba(245,158,11,.10)" stroke="rgba(245,158,11,.22)"/>
-          <text x="258" y="84" font-size="13" font-weight="900" fill="rgba(245,158,11,.95)">Handoff Kertas</text>
-          <text x="258" y="106" font-size="12" fill="rgba(15,23,42,.70)">bottleneck antrean</text>
+          <rect x="260" y="70" width="230" height="80" rx="16" fill="rgba(79,70,229,.08)" stroke="rgba(79,70,229,.22)"/>
+          <text x="278" y="102" font-size="13" font-weight="900" fill="rgba(79,70,229,.95)">Draft Kedatangan</text>
+          <text x="278" y="124" font-size="12" fill="rgba(15,23,42,.70)">multi-item per nota</text>
 
-          <rect x="460" y="52" width="190" height="70" rx="16" fill="rgba(79,70,229,.08)" stroke="rgba(79,70,229,.20)"/>
-          <text x="478" y="84" font-size="13" font-weight="900" fill="rgba(79,70,229,.95)">Verifikasi Manual</text>
-          <text x="478" y="106" font-size="12" fill="rgba(15,23,42,.70)">tanpa jejak digital</text>
+          <rect x="520" y="70" width="230" height="80" rx="16" fill="rgba(245,158,11,.10)" stroke="rgba(245,158,11,.25)"/>
+          <text x="538" y="102" font-size="13" font-weight="900" fill="rgba(245,158,11,.95)">Verifikasi Admin</text>
+          <text x="538" y="124" font-size="12" fill="rgba(15,23,42,.70)">bisa batal + alasan</text>
 
-          <rect x="680" y="52" width="210" height="70" rx="16" fill="rgba(245,158,11,.10)" stroke="rgba(245,158,11,.22)"/>
-          <text x="698" y="84" font-size="13" font-weight="900" fill="rgba(245,158,11,.95)">Rekap Harian</text>
-          <text x="698" y="106" font-size="12" fill="rgba(15,23,42,.70)">hitung manual</text>
+          <rect x="780" y="70" width="180" height="80" rx="16" fill="rgba(16,185,129,.10)" stroke="rgba(16,185,129,.25)"/>
+          <text x="798" y="102" font-size="13" font-weight="900" fill="rgba(16,185,129,.95)">Pembayaran</text>
+          <text x="798" y="124" font-size="12" fill="rgba(15,23,42,.70)">cash/transfer</text>
 
-          <rect x="920" y="52" width="240" height="70" rx="16" fill="rgba(79,70,229,.08)" stroke="rgba(79,70,229,.20)"/>
-          <text x="938" y="84" font-size="13" font-weight="900" fill="rgba(79,70,229,.95)">Rekap & Gudang</text>
-          <text x="938" y="106" font-size="12" fill="rgba(15,23,42,.70)">traceability lemah</text>
+          <rect x="990" y="70" width="180" height="80" rx="16" fill="rgba(79,70,229,.08)" stroke="rgba(79,70,229,.22)"/>
+          <text x="1008" y="102" font-size="13" font-weight="900" fill="rgba(79,70,229,.95)">Laporan & Gudang</text>
+          <text x="1008" y="124" font-size="12" fill="rgba(15,23,42,.70)">rekap otomatis</text>
         </g>
 
-        <!-- Arrows -->
-        <g stroke="url(#gDefine)" stroke-width="4" fill="none" stroke-linecap="round">
-          <path d="M210 87 C 222 87, 228 87, 240 87"/>
-          <path d="M430 87 C 442 87, 448 87, 460 87"/>
-          <path d="M650 87 C 662 87, 668 87, 680 87"/>
-          <path d="M890 87 C 902 87, 908 87, 920 87"/>
+        <g stroke="url(#gI)" stroke-width="4" fill="none" stroke-linecap="round">
+          <path d="M230 110 C 242 110, 248 110, 260 110"/>
+          <path d="M490 110 C 502 110, 508 110, 520 110"/>
+          <path d="M750 110 C 762 110, 768 110, 780 110"/>
+          <path d="M960 110 C 972 110, 978 110, 990 110"/>
         </g>
       </svg>
 
-      <div style="margin-top:10px;border:1px solid rgba(15,23,42,.10);background:rgba(248,250,252,.95);border-radius:14px;padding:10px;color:rgba(15,23,42,.72);font-size:12.6px;">
-        <b>Kesimpulan Define:</b> masalah utama bukan hanya “pencatatan”, tetapi <b>rantai proses yang bergantung pada kertas</b>.
-        Ini membuat proses lambat, rawan salah, dan sulit ditelusuri saat ada selisih atau audit.
+      <div style="margin-top:10px;border:1px solid rgba(15,23,42,.10);background:rgba(255,255,255,.92);border-radius:14px;
+                  padding:10px;color:rgba(15,23,42,.72);font-size:12.6px;">
+        <b>Perubahan kunci:</b> angka timbang tidak lagi ditulis tangan. Data mengalir dalam satu sistem dengan status yang jelas dan bisa diaudit.
       </div>
     </div>
-  </div>
-</section>
+
+    <!-- Feature Blocks -->
+    <div class="g12" style="margin-top:12px;display:grid;grid-template-columns:repeat(12,1fr);gap:12px;">
+
+      <div class="span4" style="grid-column:span 4;border:1px solid rgba(16,185,129,.20);background:rgba(16,185,129,.06);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 6px;font-size:14px;color:rgba(16,185,129,.95);">1) Auto-Weighing (RS232)</h3>
+        <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+          <li>Read data kg dari indikator timbangan via RS232.</li>
+          <li>Tombol “Ambil Angka” untuk lock berat.</li>
+          <li>Simpan juga raw string untuk pembuktian (audit).</li>
+        </ul>
+        <div style="margin-top:8px;font-size:12.5px;color:rgba(15,23,42,.70);"><b>Manfaat:</b> akurasi naik, input lebih cepat.</div>
+      </div>
+
+      <div class="span4" style="grid-column:span 4;border:1px solid rgba(79,70,229,.20);background:rgba(79,70,229,.06);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 6px;font-size:14px;color:rgba(79,70,229,.95);">2) Nota Kedatangan Multi-Item</h3>
+        <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+          <li>1 kedatangan bisa berisi banyak item (kode barang berbeda).</li>
+          <li>Bruto/Tara/Netto: netto tetap input petugas (sesuai requirement), sistem tampilkan sugesti.</li>
+          <li>Foto timbangan opsional per item.</li>
+        </ul>
+        <div style="margin-top:8px;font-size:12.5px;color:rgba(15,23,42,.70);"><b>Manfaat:</b> tidak bolak-balik, data rapi per nota.</div>
+      </div>
+
+      <div class="span4" style="grid-column:span 4;border:1px solid rgba(245,158,11,.20);background:rgba(245,158,11,.07);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 6px;font-size:14px;color:rgba(245,158,11,.95);">3) Verifikasi Bisa Membatalkan</h3>
+        <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+          <li>Admin verifikasi berat & kode barang.</li>
+          <li>Jika batal: wajib isi alasan + tercatat audit trail.</li>
+          <li>Setelah disahkan, transaksi “lock” sebelum bayar.</li>
+        </ul>
+        <div style="margin-top:8px;font-size:12.5px;color:rgba(15,23,42,.70);"><b>Manfaat:</b> kontrol kuat, minim sengketa.</div>
+      </div>
+
+      <div class="span6" style="grid-column:span 6;border:1px solid rgba(15,23,42,.12);background:rgba(248,250,252,.95);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 8px;font-size:14px;">Workflow Status (anti “data liar”)</h3>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;background:rgba(79,70,229,.08);border:1px solid rgba(79,70,229,.18);">Draft-Timbang</span>
+          <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;background:rgba(245,158,11,.10);border:1px solid rgba(245,158,11,.18);">Menunggu Verifikasi</span>
+          <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;background:rgba(16,185,129,.10);border:1px solid rgba(16,185,129,.18);">Terverifikasi</span>
+          <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;background:rgba(225,29,72,.08);border:1px solid rgba(225,29,72,.18);">Dibatalkan</span>
+          <span style="font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px;background:rgba(15,23,42,.06);border:1px solid rgba(15,23,42,.12);">Selesai Bayar</span>
+        </div>
+        <p style="margin:8px 0 0;color:rgba(15,23,42,.72);font-size:13px;">
+          Setiap perpindahan status menghasilkan <b>log aktivitas</b> (siapa, kapan, dari status apa ke status apa, alasan jika koreksi/batal).
+        </p>
+      </div>
+
+      <div class="span6" style="grid-column:span 6;border:1px solid rgba(15,23,42,.12);background:rgba(248,250,252,.95);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 8px;font-size:14px;">Laporan Otomatis (Harian & Periode)</h3>
+        <ul style="margin:0;padding-left:18px;color:rgba(15,23,42,.78);font-size:13.2px;">
+          <li>Rekap transaksi harian otomatis (tanpa hitung manual).</li>
+          <li>Rekap periode berjalan untuk supervisor.</li>
+          <li>Rekap distribusi ke gudang pusat berdasarkan jenis barang & periode.</li>
+        </ul>
+        <p style="margin:8px 0 0;color:rgba(15,23,42,.72);font-size:13px;">
+          Hasil laporan dapat diekspor (PDF/Excel) dan bisa ditelusuri balik sampai level item.
+        </p>
+      </div>
+
+      <div style="grid-column:span 12;border:1px solid rgba(79,70,229,.16);background:rgba(79,70,229,.05);border-radius:16px;padding:14px;">
+        <h3 style="margin:0 0 6px;font-size:14px;color:rgba(79,70,229,.95);">Catatan Integrasi Laravel</h3>
+        <p style="margin:0;color:rgba(15,23,42,.72);font-size:13.2px;">
+          Sistem dikembangkan berbasis <b>Laravel</b> dengan role akses (Petugas Timbang, Admin/Kasir, Supervisor).
+          Pembacaan RS232 biasanya dilakukan lewat <b>service kecil di PC timbangan</b> (bridge) lalu dikirim ke Laravel via API,
+          agar web tetap aman dan stabil.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
